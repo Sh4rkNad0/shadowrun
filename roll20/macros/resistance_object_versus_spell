@@ -1,0 +1,8 @@
+// Object Resistance
+
+!?{Force|1}
+!?{Category|Natural Objects, 3| Manufactured Low-Tech Objects,5|Manufactured High-Tech Objects and Materials,8|Highly Processed Objects,10}
+!?{Vehicle Body + Half it’s Armor|0}
+!?{Cover and Visibility Modifiers|0}
+!?{Other Modifiers (Injury, Astral Barrier, Sustained Spells, etc.)|0}
+&{template:default}{{ [[floor([[ [[?{Category}[Category]+ ?{Vehicle Body + Half it’s Armor}[Vehicle]+?{Cover and Visibility Modifiers}[Cover/Vis]+?{Other Modifiers (Injury, Astral Barrier, Sustained Spells, etc.)}[Other]]]/2]])]] }} {{TargetNumber=$[[0]]}}{{description=If Spell Force ?{Force} >= $[[2]] it affects target! }}
