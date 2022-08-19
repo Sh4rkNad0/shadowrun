@@ -1,0 +1,6 @@
+// Open Stealth Test
+
+!?{Stealth Rating|3}
+!?{Stealthing Modifiers|0}
+!?{TN Modifiers|0}
+&{template:skill}{{myname=Stealth Open Test}} {{skill=vs Perception}} {{[[[[?{Stealth Rating}[Stealth]]]d6kh1!!+ ?{Stealthing Modifiers}[Modifier]]]}} {{rolldice=$[[0]]}} {{result= $[[1]]}} {{targetnumber=Open}}
