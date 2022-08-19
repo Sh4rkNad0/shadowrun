@@ -1,0 +1,25 @@
+// Cast with correct drain soak
+
+!?{Spell?|Stunbolt}
+!?{Target|Target}
+!?{Force|8}
+!?{Damage Level|None|Light|Medium|Serious|Deadly }
+!?{Type|Physical Spell|Mana Spell}
+!?{Range| LOS | LOS(A) | Touch}
+!?{Damage Type| None | Physical, (P) | Stun, (S)}
+!?{Duration| Instantaneous, (I) | Sustained, (S) | Permanent, (P)}
+!?{Sorcery|6}
+!?{Spell Pool (Casting)|0}
+!?{Spell Pool (Drain)|0}
+!?{Add/Subtract Dice for Sorcery Test (Totem, Foci, Spirit)|0}
+!?{Casting TN|4}
+!?{Cover/Ranged Modifiers|0}
+!?{Wound Modifiers|0}
+!?{Sustained Spell Modifier|0}
+!?{Other TN Modifiers|0}
+!?{Willpower|7}
+!?{Add/Subtract Dice for Drain Test (Totem, Foci, Spirit)|0}
+!?{Limited Spell|No,0|Fetish,-1|Exlusive,-2}
+!?{Final Drain Level|L|M|S|D|D+1|D+2|D+3}
+!?{Spell Drain Modifiers|0}
+&{template:spell} {{cast=1}} {{[[-1*round([[[[?{Willpower}[Will]+?{Spell Pool (Drain)}[Pool]+?{Add/Subtract Dice for Drain Test (Totem, Foci, Spirit)}[Totem,Foci,Spirit]]]d6>[[{2,round((?{Force}+?{Limited Spell})/2.01)[Drain TN]+?{Spell Drain Modifiers}[Spell Modifier]}kh1]]!!]]/2.01)]]}} {{draintest=$[[2]]}} {{casttest=[[[[?{Sorcery}[Skill]+?{Spell Pool (Casting)}[Pool]+?{Add/Subtract Dice for Sorcery Test (Totem, Foci, Spirit)}[Totem,Foci,Spirit]]]d6>[[{2,?{Casting TN}[Cast TN]+?{Cover/Ranged Modifiers}[Cover/Ranged]+?{Wound Modifiers}[Wound]+?{Sustained Spell Modifier}[Sustaining]+?{Other TN Modifiers}[Other]}kh1]]!!]]}} {{rolldice=$[[4]]}} {{draindice=$[[0]]}} {{targetnumber=$[[5]]}} {{targetname=target2}} {{targetofspell=?{Target}}} {{spellname=Stunbolt}} {{myname=Casting}} {{draintnfinal=$[[1]]}}  {{draindamage=**?{Final Drain Level}**[[0]]}}{{castforce=[[?{Force}]]}} {{spellpool=[[?{Spell Pool (Casting)}[Cast]+?{Spell Pool (Drain)}[Drain]]]}} {{finaldrain=**?{Final Drain Level}**$[[3]]}} {{sorcerydice=[[?{Sorcery}]]}} {{description=**Casting Details:** Base TN: ?{Casting TN}, Cover/Mod: ?{Cover/Ranged Modifiers}, Sustaining: ?{Sustained Spell Modifier}, Wound Mod: ?{Wound Modifiers}, Other Mod: ?{Other TN Modifiers}, Duration: ?{Duration}, Range: ?{Range}, Spell Type: ?{Type}, Limited: ?{Limited Spell}}}
