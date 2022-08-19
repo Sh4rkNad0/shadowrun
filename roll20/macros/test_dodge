@@ -1,0 +1,7 @@
+// Dodge Test
+
+!?{Attackers Successes|1}
+!?{Combat Pool|1}
+!?{Attack Type|Single/Suppressive,0|3 Rounds,1|6 Rounds, 2| 9 Rounds, 3|12 Rounds,4|15 Rounds,5|Explosion,2}
+!?{Wound Modifiers|0}
+&{template:resistadv}{{character=Dodge}} {{name= ?{Attackers Successes} Ranged Attack Successes}} {{[[[[?{Combat Pool}[CP]]]d6>[[{2,4+?{Attack Type}[Type]+?{Wound Modifiers}[Modifier]}kh1]]!!]]}} {{rolldice=$[[0]]}} {{targetnumber=$[[1]]}} {{roll=$[[2]]}} {{combatpool=[[?{Combat Pool}]]}} {{action=dodge}} {{notes=Result: Attacker: [[?{Attackers Successes}]] vs Dodge: $[[2]]. **If dodge successes exceed attackers then attack is avoided otherwise apply to Damage Resistance test. If dodging suppressive fire the dodge successes must equal the bullets passed through.**  }}
