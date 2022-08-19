@@ -1,0 +1,17 @@
+// Sensor Based Gunnery
+
+!?{Target|NPC}
+!?{Rounds Fired|1}
+!?{Signature|6}
+!?{Gunnery Rating|1}
+!?{Combat Pool|0}
+!?{Sensors Rating|1}
+!?{Environment Modifiers|Non-Urban,0|Urban,2}}
+!?{LOS Modifiers|Direct,-3|Interrupted,0}}
+!?{Uncountered ECM|0}
+!?{Uncompensated Recoil|0}
+!?{Damage Modifiers|0}
+!?{Attack Power|1}
+!?{Attack Damage|M}
+!?{Damage Type| Phys | Stun}
+&{template:attack} {{target=?{Target}}} {{attacktest=[[[[?{Gunnery Rating}[Skill]+?{Combat Pool}[CP]+round(?{Sensors Rating}/2.01)[Sensors]]]d6>[[{2,?{Signature}[Signature]+[[?{LOS Modifiers}]][LOS]+[[?{Environment Modifiers}]][Env]+[[?{Uncountered ECM}]][ECM]+[[?{Uncompensated Recoil}]][Recoil]+[[?{Damage Modifiers}]][Damage]}kh1]]!!]]}} {{rolldice=$[[0]]}} {{targetnumber=$[[6]]}} {{rangedmods= Signature: ?{Signature}, Recoil: ?{Uncompensated Recoil}, ECM/ECCM: ?{Uncountered ECM}, LOS: ?{LOS Modifiers}, Environment: ?{Environment Modifiers}, Sensors Rating: ?{Sensors Rating} }} {{combatpool=[[?{Combat Pool}]]}} {{rounds=[[?{Rounds Fired}]]}} {{myname=Sensor Gunnery ?{Attack Power}?{Attack Damage}(?{Damage Type})}}  {{weaponpower=[[?{Attack Power}]] **?{Attack Damage} (?{Damage Type})**}}
