@@ -1,0 +1,9 @@
+//Spell Defense
+
+!?{Sorcery Dice|1}
+!?{Spell Pool Dice|1}
+!?{Add/Subtract Dice (Foci, Spirit, Totem)|0}
+!?{Force of Spell|2}
+!?{Attackers Successes|1}
+!?{Wound Modifiers|0}
+&{template:spell}{{myname=PC}} {{any=[[0]]}} {{sorcerydice=[[?{Sorcery Dice}]]}} {{castforce=[[?{Force of Spell}]]}} {{targetnumber=[[?{Force of Spell}[Force]+?{Wound Modifiers}[Wounds]]]}} {{spellpool=[[?{Spell Pool Dice}]]}} {{rolldice=[[?{Sorcery Dice}+?{Spell Pool Dice}+?{Add/Subtract Dice (Foci, Spirit, Totem)}]]}} {{spellname=Spell Defense}} {{[[?{Attackers Successes}-[[[[?{Sorcery Dice}[Sorcery]+?{Spell Pool Dice}[Pool]+?{Add/Subtract Dice (Foci, Spirit, Totem)}[Extra]]]d6>[[{2,(?{Force of Spell}[Force]+?{Wound Modifiers}[Wounds])}kh1]]!!]]]] }} {{casttest=$[[10]]}} {{description=Defending against Force [[?{Force of Spell}]] }} {{notes=Spell Defense: Attackers initial successes [[?{Attackers Successes}]] are now $[[11]], if <= 0 then spell does not work! If >0 Ally may Resist against the remaining Successes.}}
