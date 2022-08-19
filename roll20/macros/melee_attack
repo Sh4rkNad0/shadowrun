@@ -1,0 +1,12 @@
+//Melee Attack
+
+!?{Target|NPC}
+!?{Skill Rating|1}
+!?{Combat Pool|0}
+!?{Additional Dice|0}
+!?{Attack Power|1}
+!?{Attack Damage|M}
+!?{Damage Type| Phys | Stun}
+!?{Melee Modifiers (p123)|0}
+!?{Net Reach Modifiers|0}
+&{template:attack} {{target=?{Target}}} {{attacktest=[[[[?{Skill Rating}[Skill]+?{Combat Pool}[CP]+?{Additional Dice}[Extra]]]d6>[[{2,4[BaseTN]+[[?{Melee Modifiers (p123)}]][Melee Modifiers]+[[?{Net Reach Modifiers}]][Reach]}kh1]]!!]]}} {{rolldice=$[[0]]}} {{targetnumber=$[[3]]}} {{meleemods=?{Net Reach Modifiers} Other:?{Melee Modifiers (p123)}}} {{combatpool=[[?{Combat Pool}]]}} {{myname=Melee Attack ?{Attack Power}?{Attack Damage}}}  {{weaponpower=[[?{Attack Power}]] **?{Attack Damage} (?{Damage Type})**}} {{info=**Melee combat is a success test vs opponent, Tie goes to attacker. Additional successes stage up Damage, then stage up Power**}}
