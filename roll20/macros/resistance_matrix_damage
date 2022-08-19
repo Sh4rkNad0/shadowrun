@@ -1,0 +1,10 @@
+// Matrix Damage Resistance Test
+
+!?{Attacker Hits|1}
+!?{Shield Utility Hits|0}
+!?{Bod or Security Rating|1}
+!?{Hacking Pool|0}
+!?{Effective Armor Rating|0}
+!?{Attack Power|1}
+!?{Damage Level|L}
+&{template:resistadv}{{character=Defender}} {{name=Armor}} {{armorvalue=?{Effective Armor Rating}}} {{Power=?{Attack Power}}} {{wpndmg=?{Damage Level}}} {{[[[[?{Bod or Security Rating}[Bod]+?{Hacking Pool}[HP]]]d6>[[{2,?{Attack Power}[Power] - ?{Effective Armor Rating}[Armor]}kh1]]!! + ?{Shield Utility Hits}]]}} {{rolldice=$[[0]]}} {{targetnumber=$[[1]]}} {{roll=$[[2]]}} {{resist=$[[2]]}} {{hackingtpool=**?{Hacking Pool}**}} {{action=damage-resistance-test}} {{notes=Result: Attacker: [[?{Attacker Hits}]] vs Soak: $[[2]] Base Damage: **?{Damage Level}** }} 
