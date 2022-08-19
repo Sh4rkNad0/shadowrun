@@ -1,0 +1,16 @@
+// Launch Weapon Attack (Rollable Table)
+// This uses the rollable table (as Grenades)
+
+!?{Type|Grenade Launcher,3|Grenade Launcher (Air Timed),1|Missile Launcher,4|Rocket Launcher,5}
+!?{Style|Offensive,1|Defensive,0.5|Concussion,1|AVM/R,8|APM/R,0.5|HEM/R,1}
+!?{Skill Rating|1}
+!?{Combat Pool|0}
+!?{Additional Dice|0}
+!?{Weapon Intelligence Rating|0}
+!?{Move/Cover Mod|0}
+!?{Aiming Mods|0}
+!?{Uncompensated Recoil|0}
+!?{Attack Power|10}
+!?{Damage Level|S} 
+!?{Range|Short,4|Medium,5|Long,8|Extreme,9}}
+&{template:explosive}{{myname=Missile/Grenade}} {{attacktest=[[[[?{Skill Rating}[Skill]+[[?{Combat Pool}]][CP]+?{Additional Dice}[Extra]]]d6>[[{2,?{Range}[BaseTN]+[[?{Move/Cover Mod}]][Move/Cover Mod]+[[?{Aiming Mods}]][Aim Mod]+[[?{Uncompensated Recoil}]][Recoil]}kh1]]!!]]}} {{rolldice=$[[1]]}} {{targetnumber=$[[5]]}} {{scatter=[[1t[Scatter]]] ([[[[?{Type}d6]]-?{Weapon Intelligence Rating}]]-$[[6]])}} {{blastradius=?{Style} }} {{weapondamage=?{Damage Level}}}{{weaponpower=?{Attack Power}}} {{target=Target}}
