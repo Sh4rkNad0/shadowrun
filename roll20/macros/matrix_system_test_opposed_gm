@@ -1,0 +1,5 @@
+// Host Opposed System Test (gm roll)
+
+!?{Host Rating|1}
+!?{Hackers DF + Mods|2}
+/w gm &{template:matrix}{{myname=Host}} {{target=Target}} {{[[[[?{Host Rating}[Rating]]]d6>[[{2,?{Hackers DF + Mods}[DF]}kh1]]!! ]]}} {{rolldice=$[[0]]}} {{targetnumber=$[[1]]}} {{roll=$[[2]]}} {{action=Detection Roll}} {{notes=Security Tally increases by $[[2]]}}
