@@ -1,0 +1,6 @@
+// Calculate explosive damage based on distance from blast.
+
+!?{Power|10}
+!?{Type|Offensive,1|Defensive,0.5|Concussion,1|AVM/R,8|APM/R,0.5|HEM/R,1}
+!?{Meters from Center|0}
+&{template:default} {{name=Explosion is ?{Meters from Center} meters from me!}} {{Power=[[ ?{Power}[Power] - (?{Meters from Center}*?{Type})[Reduction] ]] }}
