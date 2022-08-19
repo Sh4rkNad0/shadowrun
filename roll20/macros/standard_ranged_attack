@@ -1,0 +1,15 @@
+// Ranged Attack (Standard)
+
+!?{Target|NPC}
+!?{Range|Short,4|Medium,5|long,6|extreme,9}}
+!?{Skill Rating|1}
+!?{Combat Pool|0}
+!?{Additional Dice|0}
+!?{Attack Power|1}
+!?{Attack Damage|M}
+!?{Damage Type| Phys | Stun}
+!?{Move/Cover Modifiers|0}
+!?{Aiming Modifiers|0}
+!?{Rounds Fired|1}
+!?{Uncompensated Recoil|0}
+&{template:attack} {{target=?{Target}}} {{attacktest=[[[[?{Skill Rating}[Skill]+?{Combat Pool}[CP]+?{Additional Dice}[Extra]]]d6>[[{2,?{Range}[Range]+[[?{Move/Cover Modifiers}]][Cover/Move]+[[?{Aiming Modifiers}]][Aim]+[[?{Uncompensated Recoil}]][Recoil]}kh1]]!!]]}} {{rolldice=$[[0]]}} {{targetnumber=$[[4]]}} {{rangedmods=  Move/Cover:?{Move/Cover Modifiers} Aim:?{Aiming Modifiers} Recoil:?{Uncompensated Recoil}}} {{combatpool=[[?{Combat Pool}]]}} {{rounds=[[?{Rounds Fired}]]}} {{myname=Ranged Attack ?{Attack Power}?{Attack Damage}(?{Damage Type})}}  {{weaponpower=[[?{Attack Power}]] **?{Attack Damage} (?{Damage Type})**}}
