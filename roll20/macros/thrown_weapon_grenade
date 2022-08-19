@@ -1,0 +1,15 @@
+// Thrown Grenade (with Scatter Chart)
+// Note: This uses a graphic located on another github, you may change it as desired.
+
+!?{Type|Standard Grenade,1|Aerodynamic Grenade,2}
+!?{Style|Offensive,1|Defensive,0.5|Concussion,1}
+!?{Skill Rating|1}
+!?{Combat Pool|0}
+!?{Additional Dice|0}
+!?{Weapon Intelligence Rating|0}
+!?{Move/Cover Mod|0}
+!?{Aiming Mods|0}
+!?{Attack Power|10}
+!?{Damage Level|S}
+!?{Range|Short,4|Medium,5|Long,8|Extreme,9}}
+&{template:explosive}{{myname=Thrown Grenade}} {{attacktest=[[[[?{Skill Rating}[Skill]+[[?{Combat Pool}]][CP]+?{Additional Dice}[Extra]]]d6>[[{2,?{Range}[BaseTN]+[[?{Move/Cover Mod}]][Move/Cover Mod]+[[?{Aiming Mods}]][Aim Mod]}kh1]]!!]]}} {{rolldice=$[[1]]}} {{targetnumber=$[[4]]}} {{scatter=[[?{Type}d6]]}} {{blastradius=?{Style} }} {{weapondamage=?{Damage Level}}}{{weaponpower=?{Attack Power}}} {{scatdirnumber=[[1d6]] }} {{notes=**Reduce scatter by 2M per attacker Success**}} {{target=Target}}{{scatdir=https://raw.githubusercontent.com/bahornbeck/img/master/images/scatterdiagram3.png}} {{combatpool=[[?{Combat Pool}]]}} 
