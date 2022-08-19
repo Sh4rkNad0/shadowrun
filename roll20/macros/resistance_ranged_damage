@@ -1,0 +1,12 @@
+// Ranged Damage Resistance Test
+// Will calculate the final damage code as Level( stages ), ie M(-2) will reduce to Nothing. M(2) stages to D.
+
+!?{Who?|PC}
+!?{Attacker Hits|1}
+!?{Body|3}
+!?{Combat Pool|0}
+!?{Dodge Test Successes?|0}
+!?{Effective Armor|0}
+!?{Attack Power|6}
+!?{Damage Level|M}
+&{template:resistadv}{{Power=?{Attack Power}}}{{wpndmg=?{Damage Level}}} {{[[ round([[?{Attacker Hits} - [[[[?{Body}[Body]+?{Combat Pool}[CP]]]d6>[[{2,?{Attack Power}[Power] - ?{Effective Armor}[Armor]}kh1]]!!]] - ?{Dodge Test Successes?}[Dodge]]]/2.01)]]}} {{attacktest=[[?{Attacker Hits}]]}} {{dodge=[[?{Dodge Test Successes?}]]}} {{AttackType=regular}} {{armorvalue=?{Effective Armor}}} {{finaldmg=**?{Damage Level}**$[[4]]}} {{netresult=$[[3]]}} {{name=Armor}}{{character=?{Who?}}}{{combatpool=[[?{Combat Pool}]]}}{{action=Damage Resistance Test}} {{rolldice=$[[0]]}} {{targetnumber=$[[1]]}} {{roll=$[[2]]}}
