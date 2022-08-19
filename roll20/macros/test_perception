@@ -1,0 +1,5 @@
+// Open perception test
+
+!?{IQ|3}
+!?{Perception Modifiers p232|0}
+&{template:skill}{{myname=Open Test}} {{skill=Perception}} {{[[[[?{IQ}[Rating]]]d6kh1!!+ ?{Perception Modifiers p232}[Modifier]]]}} {{rolldice=$[[0]]}} {{result= $[[1]]}} {{targetnumber=Open}}
