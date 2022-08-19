@@ -1,0 +1,7 @@
+// Generic Open Test (Attribute or Skill)
+// Can be used to default rolls or anything that requires Skill +/- TN
+
+!?{Attribute/Skill Name|Test}
+!?{Attribute/Skill Rating|3}
+!?{TN Modifiers|0}
+&{template:skill}{{myname=Open Test}} {{skill=?{Attribute/Skill Name}}} {{[[[[?{Attribute/Skill Rating}[Rating]]]d6kh1!!+ ?{TN Modifiers}[Modifier]]]}} {{rolldice=$[[0]]}} {{result= $[[1]]}} {{targetnumber=Open}}
