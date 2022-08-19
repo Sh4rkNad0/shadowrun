@@ -1,0 +1,5 @@
+// Matrix Perception (Free Sensor)
+
+!?{Sensor Rating|0}
+!?{Masking+Sleaze or IC Rating|1}
+&{template:matrix}{{myname=Matrix Perception}} {{target=Target}} {{[[[[?{Sensor Rating}[Sensors]]]d6>[[{2,?{Masking+Sleaze or IC Rating}[TN]}kh1]]!! ]]}} {{rolldice=$[[0]]}} {{targetnumber=$[[1]]}} {{roll=Successes: $[[2]]}} {{action=Test for Detecting New Icons!}} {{notes=1 success to detect the icon (if the icon is IC, 2 successes will tell the type and 3 will reveal the rating)}}
