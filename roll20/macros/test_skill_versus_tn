@@ -1,0 +1,9 @@
+// Generic Roll(Targeted)
+
+!?{Attribute/Skill Name|Test}
+!?{Attribute/Skill Rating|3}
+!?{Pool Dice|0}
+!?{Additional Dice|0}
+!?{Target Number|4}
+!?{TN Modifiers|0}
+&{template:skill}{{myname=Skill Test}} {{skill=?{Attribute/Skill Name}}} {{[[[[?{Attribute/Skill Rating}[Rating]+?{Additional Dice}[Add. Dice]+?{Pool Dice}[Pool]]]d6>[[{2,?{Target Number}[TN]+?{TN Modifiers}}kh1]]!! ]]}} {{rolldice=$[[0]]}} {{result= $[[2]]}} {{targetnumber=$[[1]]}}
