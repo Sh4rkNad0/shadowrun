@@ -1,0 +1,6 @@
+// Perception Test (Target)
+
+!?{IQ|3}
+!?{Type|Vision}
+!?{TN Modifiers p232|0}
+&{template:matrix}{{myname=Perception Test}} {{target=?{Type}}} {{[[[[?{IQ}[IQ]]]d6>[[{2, [[4]][TN]+?{TN Modifiers p232}[Mods]}kh1]]!! ]]}} {{rolldice=$[[0]]}} {{targetnumber=$[[2]]}} {{roll=Successes: $[[3]]}} {{action=Perception Test (Targeted)!}}
