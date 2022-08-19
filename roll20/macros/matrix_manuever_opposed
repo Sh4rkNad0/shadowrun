@@ -1,0 +1,8 @@
+// Counter Maneuver
+
+!?{Sensors/Security Rating|1}
+!?{Hacking Pool|0}
+!?{Lock-On Utility Rating|0}
+!?{Opposing Evasion/Security Rating|1}
+!?{TN Mods|0}
+&{template:matrix} {{myname=Defending against Maneuver}} {{target=Attacker}} {{[[[[?{Sensors/Security Rating}[Rating]+?{Hacking Pool}[HP]]]d6>[[{2,?{Opposing Evasion/Security Rating}[TN]-?{Lock-On Utility Rating}[Lock-On]}kh1]]!! ]]}} {{rolldice=$[[0]]}} {{targetnumber=$[[1]]}} {{roll=Successes: $[[2]]}} {{action=Opposing a combat maneuver!}}
