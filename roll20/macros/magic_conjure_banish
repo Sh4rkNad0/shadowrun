@@ -1,0 +1,8 @@
+// Banishing
+
+!?{Conjuring Dice|1}
+!?{Add/Subtract Dice (Foci, Spirit, Totem)|0}
+!?{Summoning Mage? Add Charisma to Test|0}
+!?{Force of Spirit|2}
+!?{Wound Modifiers|0}
+&{template:conjure}{{myname=PC}} {{draindamage=[[0]]}} {{skill=[[0]]}} {{finaldrain=[[0]]}} {{targetnumber=[[?{Force of Spirit}[Force]+?{Wound Modifiers}[Wounds]]]}} {{rolldice=[[?{Conjuring Dice}+{Summoning Mage? Add Charisma to Test}+?{Add/Subtract Dice (Foci, Spirit, Totem)}]]}} {{spellname=Banishing}} {{casttest=[[[[?{Conjuring Dice}[Conjuring]+?{Summoning Mage? Add Charisma to Test}[Charisma]+?{Add/Subtract Dice (Foci, Spirit, Totem)}[Extra]]]d6>[[{2,(?{Force of Spirit}[Force]+?{Wound Modifiers}[Wounds])}kh1]]!!]]}} {{description=Banishing Force [[?{Force of Spirit}]] Spirit.}} {{notes=Contest between spirit and magician. Winner reduces the others Force or Magic rating by net successes. Contest continues until Winner either halts it or one party is reduced to 0 Magic/Force.}}
