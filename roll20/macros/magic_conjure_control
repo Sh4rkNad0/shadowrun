@@ -1,0 +1,17 @@
+// Controlling
+
+!?{Who?|PC}
+!?{Spirit Force|8}
+!?{Conjuring Skill Rating|10}
+!?{Conjuring Dice used for Conjuring Test|2}
+!?{Add/Subtract Dice for Conjuring Test(Totem, Foci)|0}
+!?{Summoning Mage? Add Charisma to Test|0}
+!?{Sustained Spell Modifier|0}
+!?{Wound Mofidiers|0}
+!?{Other TN Modifiers (Background Count)|0}
+!?{Charisma|4}
+!?{Conjuring Dice used for Drain Test|1}
+!?{Add/Subtract Dice for Drain Test(Totem, Foci)|0}
+!?{Drain Level|Force is 1/2 Charisma,L|Force is Charisma or less,M|Force is greater than Charisma, S|Force is 1.5x Charisma,D}
+!?{TN Modifiers (Drain)|0}
+&{template:conjure} {{myname=?{Who?}}} {{conjuredice=[[?{Conjuring Skill Rating}-?{Conjuring Dice used for Conjuring Test}]]}} {{[[-1*round([[[[?{Charisma}[Cha]+?{Conjuring Dice used for Drain Test}[Conjuring Dice]+?{Summoning Mage? Add Charisma to Test}[Charisma]+?{Add/Subtract Dice for Drain Test(Totem, Foci)}[Extra]]]d6>[[{2,?{Spirit Force}[Force]+?{Wound Mofidiers}[Wound]+?{Sustained Spell Modifier}[Sustaining]+?{Other TN Modifiers (Background Count)}[TN Modifiers]}kh1]]!!]]/2.01)]]}} {{draintest=$[[4]]}} {{[[[[?{Conjuring Skill Rating}[Conjure]-?{Conjuring Dice used for Drain Test}[Drain Dice]+?{Add/Subtract Dice for Conjuring Test(Totem, Foci)}[Extra]]]d6>[[{2,?{Spirit Force}[Force]+?{Sustained Spell Modifier}[Sustaining]+?{Other TN Modifiers (Background Count)}[TN Modifiers]}kh1]]!!]]}} {{rolldice=$[[3]]}} {{casttest=$[[6]]}} {{targetnumber=$[[5]]}} {{spellname=Controlling}} {{draintn=$[[2]]}} {{draindice=$[[1]]}} {{drain=$[[4]]}} {{conjuredicedrain=[[?{Conjuring Dice used for Drain Test}]]}} {{conjuredice=$[[3]]}} {{skill=[[?{Conjuring Skill Rating}]] }} {{draindamage=**?{Drain Level}**[[0]]}} {{finaldrain=(**?{Drain Level}**)$[[10]]}} {{spirittype=Force ?{Spirit Force} Spirit}} {{description=**Controlling Details:** Base TN: ?{Spirit Force}, Sustaining: ?{Sustained Spell Modifier}, Wound Mod: ?{Wound Mofidiers}, Other Mod: ?{Other TN Modifiers (Background Count)}, Total Conjuring Dice: ?{Conjuring Skill Rating}, Total Successes: $[[6]], Base Drain: **?{Drain Level}**, Winner of contest either gains control of elemental with 1 service per net success (both make drain test) or retains control (attacker only makes drain test) }}
