@@ -1,0 +1,17 @@
+// Thrown Weapon Grenade (with Graphic)
+// This macro will use a rollable table to show a graphic of an arrow in the random direction of the throw.
+// It requires the owner of the server to setup a rollable table 1-6 with cardianal direction arrows as Description for each.
+
+
+!?{Type|Standard Grenade,1|Aerodynamic Grenade,2}
+!?{Style|Offensive,1|Defensive,0.5|Concussion,1}
+!?{Skill Rating|1}
+!?{Combat Pool|0}
+!?{Additional Dice|0}
+!?{Weapon Intelligence Rating|0}
+!?{Move/Cover Mod|0}
+!?{Aiming Mods|0}
+!?{Attack Power|10}
+!?{Damage Level|S}
+!?{Range|Short,4|Medium,5|Long,8|Extreme,9}}
+&{template:explosive}{{myname=Thrown Grenade}} {{attacktest=[[[[?{Skill Rating}[Skill]+[[?{Combat Pool}]][CP]+?{Additional Dice}[Extra]]]d6>[[{2,?{Range}[BaseTN]+[[?{Move/Cover Mod}]][Move/Cover Mod]+[[?{Aiming Mods}]][Aim Mod]}kh1]]!!]]}} {{rolldice=$[[1]]}} {{targetnumber=$[[4]]}} {{scatter=[[1t[Scatter]]] ([[?{Type}d6]])}} {{blastradius=?{Style} }} {{weapondamage=?{Damage Level}}}{{weaponpower=?{Attack Power}}} {{notes=**Reduce scatter by 2M per attacker Success**}} 
