@@ -1,1 +1,9 @@
-// Todo
+// Spell Resistence Test
+
+!?{Who?|PC}
+!?{Attacker Successes|1}
+!?{Resisting Attribute?|Will|Body|Quickness|Int|Force|10-Essence|Detection|Other}
+!?{Attribute Rating|1}
+!?{Spell Force|6}
+!?{Damage Level|M}
+&{template:resistadv}{{Power=?{Spell Force}}}{{wpndmg=?{Damage Level}}} {{[[ round([[?{Attacker Successes} - [[[[?{Attribute Rating}[Attribute]]]d6>[[{2,?{Spell Force}[Power]}kh1]]!!]]]]/2.01)]]}} {{attacktest=[[?{Attacker Successes}]]}} {{AttackType=Spell}} {{armorvalue=?{Attribute Rating}}} {{spelldmg=**?{Damage Level}**$[[4]]}} {{netresult=$[[3]]}} {{name=?{Resisting Attribute?|Will|Body|Quickness|Int|Force|10-Essence|Detection|Other}}}{{character=?{Who?}}} {{action=Damage Resistance Test}} {{rolldice=$[[0]]}} {{targetnumber=$[[1]]}} {{roll=$[[2]]}}
