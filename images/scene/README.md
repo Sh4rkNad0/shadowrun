@@ -1,3 +1,3 @@
-#Scene
+# Scene
 
-Any scenes that fit with the SR world. Combat, buildings, whatever.
+An image that sets the scene for a game, campaign or adventure.
